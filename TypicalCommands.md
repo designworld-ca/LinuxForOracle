@@ -19,10 +19,11 @@ uname -r
 
 # OS commands
 ## Shutdown or reboot System
-shutdown ubuntu
-or
-poweroff debian
-or
+### ubuntu
+shutdown 
+### debian
+poweroff 
+
 systemctl reboot -i
 
 ## Update OS packages
