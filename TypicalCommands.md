@@ -1,10 +1,11 @@
 # OS queries
-## List all running oracle instances
+## List all running oracle instances (includes the call to grep)
 ps -ef | grep pmon 
-
+## List only Oracle processes
+ps -ef | grep -i smon | grep -v grep
 ## See all processes
 ps -aux
-or
+## See all processes in real time
 top
 
 ## Show current file path
