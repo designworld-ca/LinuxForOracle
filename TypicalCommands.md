@@ -8,6 +8,9 @@ ps -aux
 ## See all processes in real time
 top
 
+## find all files in a folder with a specific date/time
+find . -type f -ls |grep 'Jan 30 08:2'
+
 ## Show current file path
 
 ECHO $PWD
