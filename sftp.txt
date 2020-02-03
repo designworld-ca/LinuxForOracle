@@ -1,0 +1,3 @@
+cd works to change directory in the remote file systems
+lcd works to change directory in the local file system
+put *.log copies all files of type .log from the local to the remote system
