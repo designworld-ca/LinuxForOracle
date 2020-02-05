@@ -3,6 +3,14 @@
 ps -ef | grep pmon 
 ## List only Oracle processes
 ps -ef | grep -i smon | grep -v grep
+# List all system processes with ora_smon in the name  
+## does not cover instances that are shut down  
+ps -ef --sort=cmd | grep ora_smon
+# Show the instance names
+ps -ef | grep ora_smon | grep -v grep | sed 's/.*smon_//' | sort
+# Show all instances that can be easily accessed
+cat /etc/oratab
+
 ## See all processes
 ps -aux
 ## See all processes in real time
