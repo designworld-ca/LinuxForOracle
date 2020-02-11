@@ -10,6 +10,8 @@ ps -ef --sort=cmd | grep ora_smon
 ps -ef | grep ora_smon | grep -v grep | sed 's/.*smon_//' | sort
 # Show all instances that can be easily accessed
 cat /etc/oratab
+# Find alert log
+find $ORACLE_BASE -type f -name alert_$ORACLE_SID.log
 
 ## See all processes
 ps -aux
