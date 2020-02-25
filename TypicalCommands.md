@@ -89,6 +89,10 @@ ALTER SYSTEM REGISTER;
 $ORACLE_HOME/OPatch/opatch lsinventory
 
 
+## Syntax for a typical cronjob
+# clean up file every Friday
+# **************************************************************************
+11 * * 5 /u01/FridayJob.sh > /u01/logs/FridayJobs.log 2>&1
 
 
 
