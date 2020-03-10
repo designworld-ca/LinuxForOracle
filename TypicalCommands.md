@@ -12,6 +12,8 @@ ps -ef | grep ora_smon | grep -v grep | sed 's/.*smon_//' | sort
 cat /etc/oratab
 # Find alert log
 find $ORACLE_BASE -type f -name alert_$ORACLE_SID.log
+## Find all file types excluding a directory
+find . -type f -name "*.sh" -not -path "./app/oracle/*"
 
 ## See all processes
 ps -aux
@@ -20,6 +22,11 @@ top
 
 ## find all files in a folder with a specific date/time
 find . -type f -ls |grep 'Jan 30 08:2'
+
+# Listing
+ls -ltr 
+## List last modified date and time
+ls -ltr --full-time *.sh
 
 ## Show current file path
 
