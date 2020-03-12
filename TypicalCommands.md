@@ -1,4 +1,6 @@
 # OS queries
+## show OS version
+cat /etc/os-release
 ## List all running oracle instances (includes the call to grep)
 ps -ef | grep pmon 
 ## List only Oracle processes
@@ -97,8 +99,8 @@ $ORACLE_HOME/OPatch/opatch lsinventory
 
 
 ## Syntax for a typical cronjob
-# clean up file every Friday
-# **************************************************************************
+### clean up file every Friday
+### **************************************************************************
 11 * * 5 /u01/FridayJob.sh > /u01/logs/FridayJobs.log 2>&1
 
 
