@@ -19,7 +19,7 @@ cat /etc/oratab
 ## Alert log
 find $ORACLE_BASE -type f -name alert_$ORACLE_SID.log
 ## Find all file types excluding a directory
-find . -type f -name "*.sh" -not -path "./app/oracle/*"
+`find . -type f -name "*.sh" -not -path "./app/oracle/*"`
 ## find all files in a folder with a specific date/time
 find . -type f -ls |grep 'Jan 30 08:2'
 
