@@ -1,29 +1,34 @@
 # OS queries
-## show OS version
-cat /etc/os-release
+## show Linux version
+cat /etc/*release
+## Kernel version 
+uname -r
+# Oracle Instances
 ## List all running oracle instances (includes the call to grep)
 ps -ef | grep pmon 
 ## List only Oracle processes
 ps -ef | grep -i smon | grep -v grep
-# List all system processes with ora_smon in the name  
+## List all system processes with ora_smon in the name  
 ## does not cover instances that are shut down  
 ps -ef --sort=cmd | grep ora_smon
-# Show the instance names
+## Show the instance names
 ps -ef | grep ora_smon | grep -v grep | sed 's/.*smon_//' | sort
-# Show all instances that can be easily accessed
+## Show all instances that can be easily accessed
 cat /etc/oratab
-# Find alert log
+# Find 
+## Alert log
 find $ORACLE_BASE -type f -name alert_$ORACLE_SID.log
 ## Find all file types excluding a directory
 find . -type f -name "*.sh" -not -path "./app/oracle/*"
+## find all files in a folder with a specific date/time
+find . -type f -ls |grep 'Jan 30 08:2'
 
 ## See all processes
 ps -aux
 ## See all processes in real time
 top
 
-## find all files in a folder with a specific date/time
-find . -type f -ls |grep 'Jan 30 08:2'
+
 
 # Listing
 ls -ltr 
@@ -31,14 +36,7 @@ ls -ltr
 ls -ltr --full-time *.sh
 
 ## Show current file path
-
 ECHO $PWD
-
-## Linux version 
-cat /etc/*release
-
-## Kernel version 
-uname -r
 
 # OS commands
 ## Shutdown or reboot System
