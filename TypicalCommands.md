@@ -49,8 +49,9 @@ systemctl reboot -i
 
 ## Update OS packages
 
-sudo apt-get update
-
+sudo apt-get update && sudo apt-get upgrade
+## OR
+sudo apt-get dist-upgrade
 ## To edit files
 nano
 CTRL X to quit
