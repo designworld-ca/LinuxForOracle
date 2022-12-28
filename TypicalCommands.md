@@ -47,11 +47,14 @@ poweroff
 
 systemctl reboot -i
 
-## Update OS packages
+# Update OS packages
 
 sudo apt-get update && sudo apt-get upgrade
 ## OR
 sudo apt-get dist-upgrade
+## and cleanup
+sudo apt autoremove
+
 ## To edit files
 nano
 CTRL X to quit
